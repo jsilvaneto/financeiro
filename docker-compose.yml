@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       POSTGRES_USER: user_admin
-      POSTGRES_PASSWORD: password_segura # Altere esta senha
+      POSTGRES_PASSWORD: jandaia@masterkey
       POSTGRES_DB: budget_data
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
@@ -26,7 +26,7 @@ services:
       - DB_POSTGRESDB_PORT=5432
       - DB_POSTGRESDB_DATABASE=budget_data
       - DB_POSTGRESDB_USER=user_admin
-      - DB_POSTGRESDB_PASSWORD=password_segura # Deve ser igual à do serviço db
+      - DB_POSTGRESDB_PASSWORD=jandaia@masterkey
       - N8N_ENCRYPTION_KEY=uma_chave_aleatoria_aqui
     volumes:
       - ./n8n_data:/home/node/.n8n
@@ -46,7 +46,7 @@ services:
       - MB_DB_DBNAME=budget_data
       - MB_DB_PORT=5432
       - MB_DB_USER=user_admin
-      - MB_DB_PASS=password_segura
+      - MB_DB_PASS=jandaia@masterkey
       - MB_DB_HOST=db
     volumes:
       - ./metabase_data:/metabase-data
